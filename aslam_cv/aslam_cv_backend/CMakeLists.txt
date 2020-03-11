@@ -3,6 +3,8 @@ project(aslam_cv_backend)
 
 find_package(catkin_simple REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
+find_package(OpenCV 3 REQUIRED)
+
 
 catkin_simple()
 

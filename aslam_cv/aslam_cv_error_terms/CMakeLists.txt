@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(aslam_cv_error_terms)
 
 find_package(catkin_simple REQUIRED)
+find_package(OpenCV 3 REQUIRED)
+
 catkin_simple()
 
 find_package(Boost REQUIRED COMPONENTS system )

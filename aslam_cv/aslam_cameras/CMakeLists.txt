@@ -3,6 +3,8 @@ project(aslam_cameras)
 
 find_package(catkin_simple REQUIRED)
 
+find_package(OpenCV 3 REQUIRED)
+
 catkin_simple()
 
 ADD_DEFINITIONS(-DASLAM_USE_ROS )
@@ -10,7 +12,7 @@ ADD_DEFINITIONS(-DASLAM_USE_ROS )
 find_package(Boost REQUIRED COMPONENTS system serialization filesystem)
 
 #common commands for building c++ executables and libraries
-cs_add_library(${PROJECT_NAME} 
+cs_add_library(${PROJECT_NAME}
   src/CameraGeometryBase.cpp
   src/GlobalShutter.cpp
   src/RollingShutter.cpp

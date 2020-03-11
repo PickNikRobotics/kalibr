@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(aslam_cv_python)
 
 find_package(catkin_simple REQUIRED)
+find_package(OpenCV 3 REQUIRED)
+
 catkin_simple()
 
 add_definitions( -fPIC -Wextra -Winit-self -Woverloaded-virtual -Wnon-virtual-dtor -Wsign-promo -Wno-long-long -std=c++0x)
@@ -36,7 +38,7 @@ add_python_export_library(${PROJECT_NAME} python/aslam_cv
   src/PinholeUndistorter.cpp
 )
 
-find_package(Boost REQUIRED COMPONENTS serialization) 
+find_package(Boost REQUIRED COMPONENTS serialization)
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 cs_install()
 cs_export()

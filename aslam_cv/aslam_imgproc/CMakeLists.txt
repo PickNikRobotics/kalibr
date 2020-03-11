@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(aslam_imgproc)
 
 find_package(catkin_simple REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 
 catkin_simple()
 
